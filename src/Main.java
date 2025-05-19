@@ -7,17 +7,20 @@ public class Main {
 		// コンストラクタを使った作成
 		String str2 = new String("Hello");
 
-		// StringBuilder sb = new StringBuilder("Hello");
-		//		sb.append(" World"); // 追加
-		//		sb.insert(5, " Beautiful"); // 挿入
-		//		sb.delete(5, 15); // 削除
-		//		sb.replace(0, 5, "Hi"); // 置換
-		//		sb.reverse(); // 反転
-		//		sb.reverse(); // 元に戻す
-		//		sb.setCharAt(0, 'J'); // 文字変更
-		//		System.out.println(sb); // 結果を確認！
+		StringBuilder sb = new StringBuilder("Hello");
+		// sb.append(" World"); // 追加
+		sb.append(" World"); // 追加
+		System.out.println(sb);
+		sb.insert(5, " Beautiful"); // 挿入
+		sb.delete(5, 15); // 削除
+		System.out.println(sb);
+		sb.replace(0, 5, "Hi"); // 置換
+		sb.reverse(); // 反転
+		sb.reverse(); // 元に戻す
+		sb.setCharAt(0, 'J'); // 文字変更
+		System.out.println(sb); // 結果を確認！
 		//
-		StringBuilder sb = new StringBuilder();
+		//StringBuilder sb = new StringBuilder();
 		for (int i = 1; i <= 3; i++) {
 			sb.append("データ").append(i).append(" ");
 		}
