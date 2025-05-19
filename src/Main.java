@@ -1,9 +1,104 @@
+import java.util.ArrayList;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 	    // Bookオブジェクトの作成
-        /*Book myBook = new Book("吾輩は猫である", "夏目漱石");
+//        ArrayList <String> fruits  = new ArrayList<String>();
+//        fruits.add("apple"); // string fruits[0] = "apple";
+//        fruits.get(0); 		// fruits[0];
+//        fruits.set(1, "grape"); // fruits[1] = "grape";
+//        //fruits[1]  //2
+//        //fruits.remove(0);		// fruits[0] 削除
+//        fruits.remove("apple");		// fruits[0] 削除
+//        // fruits[0]  grape　//1
+//        fruits.size();   // fruits.lenght;
+//        boolean hasfruits = fruits.contains("banana");	//grape　入ってますか？
+//        //true false
+//        // 全て消す
+//        fruits.clear();
+        
+        
+        
+        
+        
+        //問題1: ArrayListの基本操作
+        //String型のArrayListを作成し、3つの果物を追加してください。
+        
+        // String型のArrayListを作成
+        ArrayList<String> fruits = new ArrayList<String>();
+        
+        // 3つの果物を追加
+        fruits.add("りんご");
+        fruits.add("バナナ");
+        fruits.add("オレンジ");
+        
+        // 確認のため内容を表示
+        System.out.println("果物リスト:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+        
+        
+        // 問題2: 要素の取得と表示
+        //作成したリストから2番目の果物を取得し、出力してください。
+        String secondFruit = fruits.get(1);
+        //System.out.print(fruits.get(1));
+        
+        //
+        //問題3: 要素の追加
+        //リストの先頭に新しい果物を追加してください。
+        fruits.add(0, "ぶどう");
+        
+        // 確認のため内容を表示
+        System.out.println("果物リスト（先頭に追加後）:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+            
+        
+        //問題4: 要素の置き換え
+        //リスト内の特定の果物を別の果物に置き換えてください。
+        fruits.set(1, "いちご");
+        
+        // リストの内容を表示（置き換え後）
+        System.out.println("\n置き換え後の果物リスト:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+        
+        
+
+        //問題5: 要素の確認と削除
+        //リストに特定の果物が含まれているか確認し、存在する場合は削除してください。
+        
+        // 削除したい果物
+        String targetFruit = "バナナ";
+        
+        // リストに特定の果物が含まれているか確認
+        if (fruits.contains(targetFruit)) {
+            System.out.println("\n「" + targetFruit + "」が見つかりました。削除します。");
+            // 果物を削除
+            fruits.remove(targetFruit);
+        } else {
+            System.out.println("\n「" + targetFruit + "」はリストに含まれていません。");
+        }
+        
+        // リストの内容を表示（削除後）
+        System.out.println("\n削除後の果物リスト:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+        
+
+        
+        
+        
+        
+        
+		/*Book myBook = new Book("吾輩は猫である", "夏目漱石");
+        
         
         // 情報の表示
         myBook.displayInfo();
@@ -261,6 +356,8 @@ public class Main {
 	    String reversed = new StringBuilder(cleaned).reverse().toString();
 	    return cleaned.equals(reversed);
 	}
+	
+	
 	
 	
 	//Stringのバージョン
